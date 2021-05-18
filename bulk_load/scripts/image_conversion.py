@@ -53,7 +53,7 @@ def convert_to_jpg(file_name,target_file_path):
              
        
     else:
-        logging.info(f'Unknown file format:{file_name}')
+        logging.error(f'Unknown file format:{file_name}')
      
         
         

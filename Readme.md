@@ -11,9 +11,11 @@ Development Environment used to create this project:
 Operating System: Windows 10 Home  
 
 ### Softwares
-Anaconda:4.8.5 (https://docs.anaconda.com/anaconda/install/windows/)    
-Tesseract:5.0.0 (https://github.com/UB-Mannheim/tesseract/wiki)   
-poppler:0.68 (http://blog.alivate.com.au/poppler-windows/)
+Anaconda:4.8.5  <a href="https://docs.anaconda.com/anaconda/install/windows/">Anaconda installation</a>   
+Tesseract:5.0.0 <a href="https://github.com/UB-Mannheim/tesseract/wiki">Tesseract installation</a>   
+    Add tesseract path to environment variable 'PATH' e.g C:\Program Files\Tesseract-OCR   
+    Add tessdata by creating new environment variable. e.g TESSDATA_PREFIX = C:\Program Files\Tesseract-OCR\tessdata  
+poppler:0.68 <a href="http://blog.alivate.com.au/poppler-windows/">Popplert installation</a>
 
 ### Python libraries:
 Go to location of environment.yml file and run:  
@@ -39,7 +41,7 @@ Flow:
 
 ## Usage
 There are two ways to use this project:
-1.Bulk Load
+1.Bulk Load  
 2.Web Application
 ### Bulk Load
 1. Go inside 'bulk_load' folder on command line.  
@@ -74,4 +76,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 
-NOTE: This software depends on other packages that may be licensed under different open source licenses.
+NOTE: This software depends on other packages that are licensed under different open source licenses.
+
+## Resources
+pyttx  <a href="https://pyttsx3.readthedocs.io/en/latest/">Text to Speech library</a>

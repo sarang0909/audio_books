@@ -73,10 +73,7 @@ def convert_books():
     #clean_folder(ocr_files_path)
     #clean_folder(output_dir_path)
 
-
-
-    target = input_path
-
+ 
     start_time = time.time()      
     
 
@@ -90,11 +87,14 @@ def convert_books():
         if (ext == ".pdf"):
             audio_filename = convert_pdf_to_speech(filename,output_dir_path)
 
-        if not audio_filename:
+        if not audio_filename and ext in ['.pdf','.png', '.jpeg', '.bmp','.jpg']:
             convert_all_files(filename,processed_files_path)
             image_cleaning(processed_files_path)
             convert_jpg_to_text(filename,processed_files_path,ocr_files_path)
             audio_filename = convert_text_to_speech(filename,output_dir_path,ocr_files_path)
+        elif ext in [".txt",".doc",".docx"]:
+            audio_filename = convert_text_to_speech(filename,output_dir_path,input_path)
+        
         logging.info("Total time taken for generating final output for "+filename+" : "+str(((time.time() - start_time_file)/60))+" minutes")
         clean_folder(processed_files_path)
         clean_folder(ocr_files_path)
