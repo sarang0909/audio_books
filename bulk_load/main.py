@@ -11,7 +11,7 @@ from scripts.ocr_generation import convert_jpg_to_text
 from scripts.text_speech import convert_text_to_speech,convert_pdf_to_speech
      
  
-  
+from nltk.tokenize import sent_tokenize  
    
     
   
@@ -69,9 +69,9 @@ def convert_books():
 
 
     #clean_folder(input_path)
-    clean_folder(processed_files_path)
-    clean_folder(ocr_files_path)
-    clean_folder(output_dir_path)
+    #clean_folder(processed_files_path)
+    #clean_folder(ocr_files_path)
+    #clean_folder(output_dir_path)
 
 
 
@@ -81,7 +81,7 @@ def convert_books():
     
 
     img_path = input_path+ "/*.*"
-    print(img_path)        
+    #print(img_path)        
     img_names = glob(img_path)
     for filename in img_names:
         start_time_file = time.time()   
@@ -111,8 +111,6 @@ def convert_books():
     #directory_backup(ocr_files_path+'/'+ocr_files_path_backup+'/')
    
  
-   
-    
     
 if __name__ == '__main__':
    try:

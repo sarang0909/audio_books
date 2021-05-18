@@ -14,6 +14,9 @@ def convert_text_to_speech(filename,output_dir_path,ocr_files_path):
     
     file_number=0    
     engine = pyttsx3.init()
+    rate = engine.getProperty('rate')   # getting details of current speaking rate
+    #print (rate) 
+    engine.setProperty('rate', 140)
          
        
     text_files = ocr_files_path+'/*'
