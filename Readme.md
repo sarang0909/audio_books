@@ -67,7 +67,7 @@ There are two ways to use this project:
 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please create a Pull request for any change. 
 
 ## Next Steps
 1. Fix file download issue in web application
