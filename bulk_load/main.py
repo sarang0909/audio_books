@@ -8,7 +8,7 @@ import logging
 from scripts.image_conversion import convert_all_files
 from scripts.image_cleaning import image_cleaning     
 from scripts.ocr_generation import convert_jpg_to_text
-from scripts.text_speech import convert_text_to_speech,convert_pdf_to_speech
+from scripts.text_speech import convert_text_to_speech,convert_pdf_to_speech,convert_pdf_to_speech_slate
      
  
 from nltk.tokenize import sent_tokenize  
@@ -86,6 +86,8 @@ def convert_books():
         ext = os.path.splitext(filename)[1]
         if (ext == ".pdf"):
             audio_filename = convert_pdf_to_speech(filename,output_dir_path)
+            #audio_filename = convert_pdf_to_speech_slate(filename,output_dir_path) if issue with pdf
+            
 
         if not audio_filename and ext in ['.pdf','.png', '.jpeg', '.bmp','.jpg']:
             convert_all_files(filename,processed_files_path)

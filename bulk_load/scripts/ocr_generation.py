@@ -8,11 +8,12 @@ from PIL import Image
 import pytesseract
 
 from nltk.tokenize import sent_tokenize  
+from scripts import configuration as config
 
 def ocr_tesseract(filename):
     #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
     img = Image.open(filename)
-    text = pytesseract.image_to_string(img)
+    text = pytesseract.image_to_string(img,lang= config.LANG)
     return text
  
   

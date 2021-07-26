@@ -34,3 +34,4 @@ dependencies:
     - pywin32==300
     - regex==2021.4.4
     - tqdm==4.60.0
+    - slate3k==0.5.3
